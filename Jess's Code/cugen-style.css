@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 100px;
+    background: rgb(20,20,20);
+    font-family: "Source Sans Pro";
+}
+
+/* NAVBAR STYLING */
+.container {
+    padding: 10px 50px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 0;
+    margin: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.5s;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: black;
+}
+
+.navbar-default {
+    background: white;
+}
+
+.navbar-toggle {
+    margin-top: 13px;
+    margin-right: 0;
+}
+
+.logo {
+    height: 60px;
+}
+
+ul.nav.navbar.navbar-right:active {
+    color: white;
+}
+
+/* ABOUT STYLING*/
+.row.content {
+    margin-top: 50px;
+    color: #e7e7e7;
+    display: block;
+}
+
+.background-logo {
+    background-image: url("cugen-logo-faded.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ /*   background-attachment: fixed;*/
+    background-position: center;
+    background-clip: content-box;
+    
+    height: 100%;
+    
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h1::first-letter {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+hr{
+    border-top: 3px solid rgba(231,231,231, 0.2);
+    margin-top: 25px;
+}
+
+/* MEMBERS STYLING */
+
+html, body, .container, .row.content, .col-md-9.about-content, .section.team , .row.members, .row.shows, .section.dance {
+    height: 100%;
+    
+}
+
+.section {
+    display: block;
+}
+
+.bg-grid {
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale();
+
+}
+
+.bg-grid:hover {
+    filter: none;
+}
+
+.member-grid , .show-grid{
+    padding: 15px;
+    background-clip: content-box;
+}
+
+.mem-name, .show-name {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: center;
+
+    font-size: 1.7em;
+    letter-spacing: 0.5em;
+    /*text-shadow: 1px 1px 8px #FEFEFE;*/
+}
+
+/*MEMBERS BG IMGS*/
+#andrew {
+    background-image: url("members/andrew-1.jpg");
+}
+
+#anthony {
+    background-image: url("members/anthony-1.jpg");
+}
+
+#ari {
+    background-image: url("members/ari-1.jpg");
+}
+
+#ashley {
+    background-image: url("members/ash-1.jpg");
+}
+
+#ayano {
+    background-image: url("members/ayano-1.jpg");
+}
+
+#bill {
+    background-image: url("members/bill-1.jpg");
+}
+
+#chantel {
+    background-image: url("members/chantel-1.jpg");
+}
+
+#chris {
+    background-image: url("members/chris-1.jpg");
+}
+
+#clarissa {
+    background-image: url("members/clar-1.jpg");
+}
+
+#georgie {
+    background-image: url("members/georgie-1.jpg");
+}
+
+#greg {
+    background-image: url("members/greg-1.jpg");
+}
+
+#heather {
+    background-image: url("members/heather-1.jpg");
+}
+
+#helen {
+    background-image: url("http://loremflickr.com/320/240");
+}
+
+#hudson {
+    background-image: url("members/hudson-1.jpg");
+}
+
+#ingrid {
+    background-image: url("http://loremflickr.com/320/240");
+}
+
+#jess {
+    background-image: url("members/jess-1.jpg");
+}
+
+#jy {
+    background-image: url("members/jy-1.jpg");
+}
+
+#kenny {
+    background-image: url("members/kenny-1.jpg");
+}
+
+#mq {
+    background-image: url("members/mq-1.jpg");
+}
+
+#minzi {
+    background-image: url("members/minzi-1.jpg");
+}
+
+#natalia {
+    background-image: url("members/natalia-1.jpg");
+}
+
+#steph {
+    background-image: url("members/steph-1.jpg");
+}
+
+#andrew {
+    background-image: url("members/andrew-1.jpg");
+}
+
+#anthony {
+    background-image: url("members/anthony-1.jpg");
+}
+
+/* PERFORMANCES STYLING */
+
+#showcase {
+    background-image: url("shows/showcase.jpg");
+}
+
+#nmk {
+    background-image: url("shows/nmk.jpg");
+}
+
+#cshock {
+    background-image: url("shows/cshock.jpg");
+}
+
+#ghr {
+    background-image: url("shows/ghr.jpg");
+}
+
+#lg {
+    background-image: url("shows/lg.jpg");
+}
+
+#ksacs {
+    background-image: url("shows/ksacs.jpg");
+}
+
+#rawcus {
+    background-image: url("shows/rawcus.jpg");
+}
