@@ -14,55 +14,50 @@ body {
     padding: 10px 50px;
 }
 
-.navbar-default .navbar-nav>li>a {
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.2em;
-    padding: 0;
-    margin: 20px;
-    transition: 0.3s;
-    -webkit-transition: 0.5s;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-    color: black;
-}
-
 .navbar-default {
     background: white;
 }
-
-.navbar-toggle {
-    margin-top: 13px;
-    margin-right: 0;
-}
-
-.logo {
-    height: 60px;
-}
-
-ul.nav.navbar.navbar-right:active {
-    color: white;
-}
+    .navbar-default .navbar-collapse {
+        border: none;
+    }
+    .navbar-toggle {
+        margin-top: 13px;
+        margin-right: 0;
+        border: none;
+    }
+    .navbar-default .navbar-nav>li>a {
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.2em;
+        padding: 0;
+        margin: 20px;
+        transition: 0.3s;
+        -webkit-transition: 0.5s;
+        cursor: pointer;
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+        color: black;
+    }
+    .logo {
+        height: 60px;
+    }
+    ul.nav.navbar.navbar-right:active {
+        color: white;
+    }
 
 /* ABOUT STYLING*/
 .row.content {
-    margin-top: 50px;
+    margin-top: 15px;
     color: #e7e7e7;
     display: block;
-}
-
-.background-logo {
-    background-image: url("cugen-logo-faded.png");
-    background-size: contain;
+    background-image: url(cugen-logo-faded.png);
     background-repeat: no-repeat;
- /*   background-attachment: fixed;*/
-    background-position: center;
-    background-clip: content-box;
-    
-    height: 100%;
-    
+    background-position-x: calc(50% + 440px);
+    background-position-y: 150px;
+    background-attachment: fixed;
+    background-size: 200px;
+    padding-right: 250px;
 }
 
 h1 {
@@ -71,13 +66,13 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
 }
-
-h1::first-letter {
-    font-size: 1.5em;
-}
+    h1::first-letter {
+        font-size: 1.5em;
+    }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 400;
 }
 
@@ -88,7 +83,7 @@ hr{
 
 /* MEMBERS STYLING */
 
-html, body, .container, .row.content, .col-md-9.about-content, .section.team , .row.members, .row.shows, .section.dance {
+html, body, .container, .col-md-9.about-content, .row.shows, .section.dance {
     height: 100%;
     
 }
@@ -98,20 +93,44 @@ html, body, .container, .row.content, .col-md-9.about-content, .section.team , .
 }
 
 .bg-grid {
-    height: 80%;
+    height: 400px;
     background-size: cover;
     background-position: center;
     filter: grayscale();
-
+    cursor: pointer;
+    transition: 0.5s;
 }
+    .bg-grid p {
+        padding: 10px;
+        background: none;
+    }
 
-.bg-grid:hover {
-    filter: none;
-}
+    .bg-grid:hover {
+        filter: none;
+    }
+
+    /* #PERFORMANCES .bg-grid:hover p {
+        background: rgba(0,0,0,0.5);
+    }
+
+    .bg-grid p span {
+        display: none;
+    }
+
+    .bg-grid:hover p span {
+        display: inline;    
+        letter-spacing: 0;
+        font-size: 16px;
+        line-height: 26px;
+    } */
 
 .member-grid , .show-grid{
     padding: 15px;
     background-clip: content-box;
+    height: 400px;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .mem-name, .show-name {
@@ -121,10 +140,39 @@ html, body, .container, .row.content, .col-md-9.about-content, .section.team , .
 
     text-align: center;
 
-    font-size: 1.7em;
-    letter-spacing: 0.5em;
+    font-size: 20px;
+    letter-spacing: 5px;
     /*text-shadow: 1px 1px 8px #FEFEFE;*/
 }
+
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    display: none;
+}
+    .lightbox iframe {
+        margin: 0 auto;
+    }
+    .lightbox h3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        margin: 15px;
+        cursor: pointer;
+    }
 
 /*MEMBERS BG IMGS*/
 #andrew {
@@ -215,14 +263,6 @@ html, body, .container, .row.content, .col-md-9.about-content, .section.team , .
     background-image: url("members/steph-1.jpg");
 }
 
-#andrew {
-    background-image: url("members/andrew-1.jpg");
-}
-
-#anthony {
-    background-image: url("members/anthony-1.jpg");
-}
-
 /* PERFORMANCES STYLING */
 
 #showcase {
@@ -251,4 +291,33 @@ html, body, .container, .row.content, .col-md-9.about-content, .section.team , .
 
 #rawcus {
     background-image: url("shows/rawcus.jpg");
+}
+
+@media (max-width: 1200px) {
+    .row.content {
+        background-position-x: calc(50% + 340px);
+    }
+}
+
+@media (max-width: 992px) {
+    .member-grid, .bg-grid, .show-grid {
+        height: 300px;
+    }
+    .row.content {
+        background-position-x: calc(50% + 240px);
+    }
+}
+
+@media (max-width: 768px) {
+    .row.content {
+        background-image: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .col-xs-6 {
+        width: 100%;
+        background-position: top;
+    }
 }
